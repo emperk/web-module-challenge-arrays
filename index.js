@@ -147,10 +147,38 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
+// function appleType(arr, search){
+//     for(let i = 0; i < arr.length; i++){
+//       if(arr[i].includes(search)){
+//         return arr[i];
+//       }
+//     }
+//   }
+  
+//   console.log(appleType(apples, 'Red'));
 
+// var array = ['A', 'B', 'C']; // Test
+// var search_term = 'B';
+
+// for (var i=array.length-1; i>=0; i--) {
+//     if (array[i] === search_term) {
+//         array.splice(i, 1);
+//         // break;       //<-- Uncomment  if only the first term has to be removed
+//     }
+// }
+
+function removeFlavorByName(arr, str){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === str) {
+            arr.splice(i,1);
+            return arr;
+        }
+    }
+}
+console.log(removeFlavorByName(originalFlavors, 'Chocolate'))
+
+// arr.splice(i,1);
+// return arr;
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
