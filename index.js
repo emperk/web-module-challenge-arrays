@@ -127,10 +127,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(arr){
-    return arr[4];
+function getFlavorByIndex(arr, num){
+    return arr[num];
 }
-console.log(getFlavorByIndex(originalFlavors));
+console.log(getFlavorByIndex(originalFlavors, 4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -147,26 +147,6 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-// function appleType(arr, search){
-//     for(let i = 0; i < arr.length; i++){
-//       if(arr[i].includes(search)){
-//         return arr[i];
-//       }
-//     }
-//   }
-  
-//   console.log(appleType(apples, 'Red'));
-
-// var array = ['A', 'B', 'C']; // Test
-// var search_term = 'B';
-
-// for (var i=array.length-1; i>=0; i--) {
-//     if (array[i] === search_term) {
-//         array.splice(i, 1);
-//         // break;       //<-- Uncomment  if only the first term has to be removed
-//     }
-// }
-
 function removeFlavorByName(arr, str){
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === str) {
@@ -175,10 +155,15 @@ function removeFlavorByName(arr, str){
         }
     }
 }
-console.log(removeFlavorByName(originalFlavors, 'Chocolate'))
+console.log(removeFlavorByName(originalFlavors, 'Chocolate'));
 
-// arr.splice(i,1);
-// return arr;
+console.log(originalFlavors);
+
+originalFlavors.push('Vanilla Burnt Almond');
+originalFlavors.push('Chocolate');
+
+console.log(originalFlavors);
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -201,10 +186,32 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(arr, str){
+    let flavorType = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].includes(str)) {
+            flavorType.push(arr[i]);
+        }
+    }
+    return flavorType;
 }
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
+
+// const apples = ['Jonagold', 'Cameo', 'Empire', 'McIntosh', 'Golden Delicious', 'Fuji', 'Cortland', 'Red Delicious', 'Gala', 'Granny Smith', 'Braeburn', 'Honeycrisp', 'Red Granny']
+
+// function appleType(arr, search){
+//   let typeArray = [];
+//   for(let i = 0; i < arr.length; i++){
+//     if(arr[i].includes(search)){
+//       typeArray.push(arr[i]);
+//     }
+//   }
+  
+//   return typeArray;
+// }
+
+// console.log(appleType(apples, 'Red'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
